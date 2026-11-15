@@ -1,0 +1,6 @@
+schema_version=1
+scenario_id=healthy
+end_ms=1500
+timeout_ms=300
+drop_window_ms=none
+expected_events=none

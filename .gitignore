@@ -1,0 +1,7 @@
+/build/
+/build_*/
+/application/
+/evidence/communication/*_ctest.xml
+/evidence/communication/*_ctest.log
+__pycache__/
+*.pyc

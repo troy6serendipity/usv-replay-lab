@@ -1,0 +1,34 @@
+{
+  "exit_code": 0,
+  "report": {
+    "report_version": 1,
+    "scenario_id": "dropout",
+    "subject": "reference",
+    "end_ms": 1500,
+    "timeout_ms": 300,
+    "delivered_heartbeats": 11,
+    "dropped_heartbeats": 5,
+    "final_state": "online",
+    "expected_events": [
+      {
+        "time_ms": 800,
+        "kind": "timeout"
+      },
+      {
+        "time_ms": 1100,
+        "kind": "recovered"
+      }
+    ],
+    "observed_events": [
+      {
+        "time_ms": 800,
+        "kind": "timeout"
+      },
+      {
+        "time_ms": 1100,
+        "kind": "recovered"
+      }
+    ],
+    "passed": true
+  }
+}

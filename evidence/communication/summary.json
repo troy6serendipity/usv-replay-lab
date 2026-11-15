@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "project_version": "0.2.0",
+  "recorded_at": "2026-11-12T18:22:33.975478+08:00",
+  "source_control": "local files; no Git repository or public release yet",
+  "scope": "synthetic offline replay and actual local IPv4 sockets; no vessel data",
+  "validation_runs": [
+    {
+      "platform": "Windows x64",
+      "compiler": "MSVC 19.42.34435",
+      "cmake": "3.29.5-msvc4",
+      "python": "3.12.7",
+      "ctest_timestamp_local": "2026-11-12T18:20:47",
+      "timezone": "Asia/Shanghai",
+      "configure_exit_code": 0,
+      "build_exit_code": 0,
+      "ctest_exit_code": 0,
+      "reported_total_seconds": 3.41,
+      "tests": [
+        {
+          "name": "heartbeat_replay",
+          "status": "passed",
+          "duration_seconds": 0.213819
+        },
+        {
+          "name": "network_loopback",
+          "status": "passed",
+          "duration_seconds": 0.2271
+        },
+        {
+          "name": "examples_and_wire",
+          "status": "passed",
+          "duration_seconds": 0.485282
+        },
+        {
+          "name": "installed_consumer",
+          "status": "passed",
+          "duration_seconds": 2.455
+        }
+      ],
+      "evidence": [
+        {
+          "file": "windows_ctest.xml",
+          "sha256": "24258968514b47dc48dd88efc7cbcd39425a24d3fc2cc91e4a4644177b7f3565"
+        },
+        {
+          "file": "windows_ctest.log",
+          "sha256": "4b6444279f64f0d66cc4ba3636876556e503caa1fd8affcb7a4c286576bb99a6"
+        }
+      ],
+      "shared_library": {
+        "path": "build/Release/usv_comm.dll",
+        "sha256": "83c7aa4a2d8ab33158b0947dba05bb00a7e5aa2f3e1cdbf35af53137dc5a2d50"
+      },
+      "dynamic_link_check": "dumpbin lists usv_comm.dll"
+    },
+    {
+      "platform": "WSL Ubuntu 26.04.1 x86_64",
+      "compiler": "GCC 15.2.0",
+      "cmake": "4.2.3",
+      "python": "3.14.4",
+      "ctest_timestamp_local": "2026-11-12T18:19:45",
+      "timezone": "Asia/Shanghai",
+      "configure_exit_code": 0,
+      "build_exit_code": 0,
+      "ctest_exit_code": 0,
+      "reported_total_seconds": 10.8,
+      "tests": [
+        {
+          "name": "heartbeat_replay",
+          "status": "passed",
+          "duration_seconds": 0.134666
+        },
+        {
+          "name": "network_loopback",
+          "status": "passed",
+          "duration_seconds": 0.0848815
+        },
+        {
+          "name": "examples_and_wire",
+          "status": "passed",
+          "duration_seconds": 0.137468
+        },
+        {
+          "name": "installed_consumer",
+          "status": "passed",
+          "duration_seconds": 10.3793
+        }
+      ],
+      "evidence": [
+        {
+          "file": "linux_ctest.xml",
+          "sha256": "c828c2278dfcbf67b45f303cfc71c48c39f6df816ea6425a31eb514603fa5b5d"
+        },
+        {
+          "file": "linux_ctest.log",
+          "sha256": "978427ddf2b2e55fb9e47c332d96c0e6bff5c8d9d87887ac6260159f99823281"
+        }
+      ],
+      "shared_library": {
+        "path": "build_linux/libusv_comm.so.0.2.0",
+        "sha256": "1080e6a524a5f156d1993e2db0ea247c288cb9bc34a8751c45927375ef956d59"
+      },
+      "dynamic_link_check": "ldd resolves libusv_comm.so.0 from build_linux"
+    }
+  ],
+  "format_check": {
+    "tool": "clang-format 18.1.8",
+    "exit_code": 0
+  },
+  "dataset_check": {
+    "records": 16,
+    "first_ms": 0,
+    "last_ms": 1500,
+    "exit_code": 0
+  },
+  "input_and_source_sha256": {
+    ".clang-format": "5fcaf5afe01ba18e14cb97852ead0334a40646099f282bc1a20423de3ab87b64",
+    "cmake/usv_comm_config.cmake.in": "0734c5612dc28ff8bee3e13c937107b1a0fc5758eff8cd9214eeb6b27c98c666",
+    "cmake/verify_package.cmake": "59592fa3562ac370a7cbfe5caa51e0b48286ebaf6a0073a5f2cff36c61a81ab4",
+    "CMakeLists.txt": "6ff9fa6a50cba56514a00c2d98f7c7923357805b530c1d129ea065d656dec16d",
+    "datasets/heartbeat_v1/dropout.case": "158bc535e8225ca9137a3133ed7da96c39c98a32712f7b453a2a27554aec051c",
+    "datasets/heartbeat_v1/healthy.case": "a475fcf606f411f90f530319b8c4a18156b463cee70184645f2437843e0f2356",
+    "datasets/heartbeat_v1/heartbeat.csv": "87e28bece0c959eef9318e26765a7caf7a85c4b44c6dfcb377d44cc7d98486fd",
+    "include/usv_comm/communication.h": "623a82350092459f790f81c5517dd785e28a13b75c54dd4c6a3f7693d9dc5129",
+    "include/usv_comm/export.h": "40734d66497920b6281f6869818ef8324e57ff6304a00f5bade46462803fec9b",
+    "include/usv_comm_examples/example_args.h": "5a7eb6899e9ceb59c758ba1d412acc1d72fa02b31d0f9203a90e17bceaba4551",
+    "include/usv_replay_lab/case_io.h": "24a60d580b657d64a9db709cdbab8bb0e5805509d78759f7016e3e3256443a7d",
+    "include/usv_replay_lab/replay.h": "1dadd4891c9300f3582452af227e41a210391cfb3d18ae5d79f9e2306e7a3f2c",
+    "src/case_io.cpp": "4b6ee775a448b93b3041afe90bbc8b28f5222440fad9ce0670bdecd321a3067e",
+    "src/comm/communication.cpp": "f831e2b33a3aeef0a06f1a65142beef2db9e8ca00335727cadc9079ecc7eabdd",
+    "src/examples/comm/tcp_echo_client.cpp": "8b2e70714204dd37c13bd4897c27c3054074bc64065e6ae61e5966946609da37",
+    "src/examples/comm/tcp_echo_server.cpp": "78a11a0429f221019ffad56e504c87ec7ef90cb4d48b34e9bb63dd449f1591c0",
+    "src/examples/comm/udp_echo_client.cpp": "5d8dc374dde71c9692c44e562036db214c163e372cbc576da0a99ee402970e35",
+    "src/examples/comm/udp_echo_server.cpp": "61926bf41edea18480560323d7d9daac481f92c64ef6dd9f7d6550bc1833189e",
+    "src/main.cpp": "739741a4c307fe57905b025ecf1fd07b479e48f566726a96bba0123be9f7dd8d",
+    "src/replay.cpp": "86791cab42db77d0f088694597ae7c70ada86b618af205f561066ec958b8af00",
+    "src/tests/comm/network_loopback.cpp": "67ba72a47401c545bcf9676cde8c62f0f83772b995796bd5b975f30011f6f474",
+    "tests/consumer/CMakeLists.txt": "8a02d09908bade670f617f15daf78a2c9b8d85b5a869940e009ced243a641acf",
+    "tests/consumer/src/main.cpp": "b822d81e0a911196237458a0ab8f3e3c38cae10161b367a8215178c36cea0dc9",
+    "tests/fixtures/beyond_end.csv": "a866d6b60f165918fe8562da3d05005a9ff33f09becd9e85017481d5195a4e5f",
+    "tests/fixtures/deadline_tie.case": "05d6e885e5bb0381add4c565254d3e75eb9eff4c042483e0979c0382521daa6e",
+    "tests/fixtures/deadline_tie.csv": "8bd2665cfb245192ae354333d44d8f6c59aec2453ed492e314cb7ba04f751559",
+    "tests/fixtures/decreasing.csv": "8abe247620f020d683ec54241d2fa8bceca2ff3f61ed92748ab5cb8115c85c9f",
+    "tests/fixtures/empty.csv": "2904b272fd69b5dc6cd3051f3ac0fb5cce5804e4a9e8c7a40b814694467ec809",
+    "tests/fixtures/malformed.csv": "d896a4e3cbd36e098846d51c6d42bb7c37d970b410984b48ac29623ff63fd20f",
+    "tests/fixtures/startup_timeout.case": "b410976e70c5aa63c48a081c61740297b9ef55a62ceaebc9dea7644ae3d26bd3",
+    "tests/fixtures/unsupported_version.case": "5cc420a4b8efaff79b5f7308d8de916ae2ee02eec8ecadecb23b90857b9a6e9d",
+    "tests/verify_examples.py": "7afd2d9589ddc86fed7f485ba9714895743208dfa79741deb699f9c5e9d6cf91",
+    "tests/verify_replay.py": "a240d0e650d17b90bfe03f4c0edd7f08dbc8caf5d11998b45b198206a42bee66",
+    "tools/generate_heartbeat.py": "c483ef8253ab21765d5a35f8028a10d5f4599d586057994ac3a27bb3c8c40391"
+  }
+}

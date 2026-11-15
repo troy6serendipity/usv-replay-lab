@@ -1,0 +1,6 @@
+schema_version=1
+scenario_id=deadline_tie
+end_ms=600
+timeout_ms=300
+drop_window_ms=none
+expected_events=timeout@600

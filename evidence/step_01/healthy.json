@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "report": {
+    "report_version": 1,
+    "scenario_id": "healthy",
+    "subject": "reference",
+    "end_ms": 1500,
+    "timeout_ms": 300,
+    "delivered_heartbeats": 16,
+    "dropped_heartbeats": 0,
+    "final_state": "online",
+    "expected_events": [],
+    "observed_events": [],
+    "passed": true
+  }
+}

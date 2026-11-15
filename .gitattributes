@@ -1,0 +1,3 @@
+/datasets/heartbeat_v1/*.csv text eol=lf
+/datasets/heartbeat_v1/*.case text eol=lf
+/tests/fixtures/deadline_tie.csv text eol=crlf

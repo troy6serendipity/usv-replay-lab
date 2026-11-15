@@ -1,0 +1,22 @@
+{
+  "dataset": "heartbeat_v1",
+  "inputs_sha256": {
+    "heartbeat.csv": "87e28bece0c959eef9318e26765a7caf7a85c4b44c6dfcb377d44cc7d98486fd",
+    "healthy.case": "a475fcf606f411f90f530319b8c4a18156b463cee70184645f2437843e0f2356",
+    "dropout.case": "158bc535e8225ca9137a3133ed7da96c39c98a32712f7b453a2a27554aec051c"
+  },
+  "demo_exit_codes": {
+    "healthy": 0,
+    "dropout": 0,
+    "missed_alert": 1
+  },
+  "repeat_dropout_report_identical": true,
+  "edge_checks_passed": [
+    "deadline_tie_duplicate_timestamps_and_end_horizon",
+    "empty_trace_startup_timeout",
+    "reject_decreasing_trace",
+    "reject_malformed_timestamp",
+    "reject_record_after_end",
+    "reject_unknown_schema_version"
+  ]
+}
